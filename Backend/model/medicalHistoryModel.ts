@@ -3,15 +3,15 @@ import { iMedicalData } from "../utils/interface";
 
 
 
-const medicalHistoriesModel = new Schema(
+const medicalHistoriesModel = new Schema<iMedicalData>(
     {
-   doctotName: {
+   doctorName: {
     type: String
    },
    hospitalName: {
     type: String
    },
-   Diagnosis: {
+   diagnosis: {
     type: String
    },
    status: {

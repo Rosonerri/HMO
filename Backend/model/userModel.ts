@@ -3,7 +3,7 @@ import { iUserData } from "../utils/interface";
 
 
 
-const userModel = new Schema(
+const userModel = new Schema<iUserData>(
     {
    firstName: {
     type: String
@@ -15,7 +15,8 @@ const userModel = new Schema(
     type: String
    },
    email: {
-    type: String
+    type: String,
+    unique: true
    },
    avatar: {
     type: String
@@ -27,7 +28,8 @@ const userModel = new Schema(
     type: String
    },
    verify: {
-    type: Boolean
+    type: Boolean,
+    default: false
    },
    status: {
     type: String

@@ -1,5 +1,7 @@
-interface iMedical{
-    doctorNme: string;
+import { Document } from "mongoose";
+
+export interface iMedical{
+    doctorName: string;
     hospitalName: string;
     diagnosis: string;
     cost: number;
@@ -8,8 +10,8 @@ interface iMedical{
 }
 
 
-interface iMember{
-    firstNme: string;
+export interface iMember{
+    firstName: string;
     middleName: string;
     lastName: string;
     email: string;
@@ -21,8 +23,8 @@ interface iMember{
 }
 
 
-interface iUser{
-    firstNme: string;
+export interface iUser{
+    firstName: string;
     middleName: string;
     lastName: string;
     email: string;

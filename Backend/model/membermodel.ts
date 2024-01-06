@@ -3,7 +3,7 @@ import { iMemberData } from "../utils/interface";
 
 
 
-const userModel = new Schema(
+const userModel = new Schema<iMemberData>(
     {
    firstName: {
     type: String
