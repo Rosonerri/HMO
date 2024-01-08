@@ -3,7 +3,7 @@ import { iMemberData } from "../utils/interface";
 
 
 
-const userModel = new Schema<iMemberData>(
+const memberModel = new Schema<iMemberData>(
     {
    firstName: {
     type: String
@@ -17,6 +17,9 @@ const userModel = new Schema<iMemberData>(
    email: {
     type: String
    },
+   relationship: {
+    type: String
+   },
    avatar: {
     type: String
    },
@@ -27,11 +30,6 @@ const userModel = new Schema<iMemberData>(
    status: {
     type: String
    },
-   user: [{
-    type: Types.ObjectId,
-    ref: "users"
-   }],
-
    medicalHistory: [{
     type: Types.ObjectId,
     ref: "medicalHistory"
@@ -41,5 +39,5 @@ const userModel = new Schema<iMemberData>(
 
 );
 
-export default model<iMemberData>("members", userModel )
+export default model<iMemberData>("members", memberModel )
 

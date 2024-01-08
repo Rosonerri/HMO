@@ -15,10 +15,10 @@ export interface iMember{
     middleName: string;
     lastName: string;
     email: string;
+    relationship: string;
     avatar: string;
     avatarID: string;
     status: string;
-    user: {};
     medicalHistory: Array<{}>;
 }
 
@@ -26,6 +26,8 @@ export interface iMember{
 export interface iUser{
     firstName: string;
     middleName: string;
+    location: string;
+    phoneNumber: string;
     lastName: string;
     email: string;
     avatar: string;

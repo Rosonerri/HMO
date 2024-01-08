@@ -14,6 +14,12 @@ const userModel = new Schema<iUserData>(
    lastName: {
     type: String
    },
+   location: {
+    type: String
+   },
+   phoneNumber: {
+    type: String
+   },
    email: {
     type: String,
     unique: true
