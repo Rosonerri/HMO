@@ -62,3 +62,43 @@ export const viewMyMember  =  async (req:Request, res:Response) =>{
         })
     }
 }
+
+
+export const loginMember  = async (req:Request, res:Response) =>{
+    try{
+        const {userId} = req.params 
+        const {firstName, token} = req.body
+
+        const getUser: any  = await userModel.findById(userId).populate({
+            path: "members"
+        })
+          
+    const getMember = getUser?.members.some((el: any) => el.firstName === firstName)
+
+        if (getMember && getUser.token === token){
+            return res.status(200).json({
+                message: "Member Gotten Successfully",
+                data: getUser
+            })
+        }else{
+            return res.status(404).json({
+                message: "Access Denied"
+            })
+        }
+           }catch(error){
+        return res.status(404).json({
+            message: "Error"
+        })
+    }
+}
+
+//Update Member Info
+
+
+export const updateMemberNames = async (req: Request, res: Response) => {
+    try{
+
+    }catch(error){
+        
+    }
+}
